@@ -1,3 +1,4 @@
 qrcode
 qrcode[pil]
 requests
+selenium
