@@ -180,7 +180,7 @@ try:
 
         if driver is None:
             options = Options()
-            # options.headless = True
+            options.headless = True
         driver = webdriver.Firefox(options=options)
         driver.get("https://bitly.com/")
         driver.find_element_by_xpath('//*[@id="shorten_url"]').send_keys(url)
