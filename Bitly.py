@@ -172,7 +172,7 @@ try:
         if not os.path.exists("geckodriver.exe"):
             print("No Geckodriver installed. Please download, extreact, and move to the application folder")
             webbrowser.open("https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-win64.zip")
-            os.open(os.path.dirname(__file__))
+            print("Application Folder "+os.path.dirname(__file__))
 
         if driver is None:
             driver = webdriver.firefox
