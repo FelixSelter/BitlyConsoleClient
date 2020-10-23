@@ -31,8 +31,16 @@ Clone the repository to create bitlinks from you shell. Its written in python so
 ![grafik](https://user-images.githubusercontent.com/55546882/97020910-720eb480-1552-11eb-80c4-cc2f6f254fde.png)
 ### Execute the bat or the python file. Remember the bat only parses 2 arguements which should be enough
 ![grafik](https://user-images.githubusercontent.com/55546882/97021714-7be4e780-1553-11eb-9cf2-5328f54ef967.png)
-### You could also launch using python. Notice the %cd% ![grafik](https://user-images.githubusercontent.com/55546882/97022386-573d3f80-1554-11eb-8515-db98cb9a6d1e.png)
+### You could also launch using python. Notice the %cd% ![grafik](https://user-images.githubusercontent.com/55546882/97022386-573d3f80-1554-11eb-8515-db98cb9a6d1e.png)  
 
+
+#If you want to use the program without an account you should install firefox and download geckodriver
+
+![grafik](https://user-images.githubusercontent.com/55546882/97032015-6971aa80-1561-11eb-8ed8-d59f1486e712.png)  
+
+![grafik](https://user-images.githubusercontent.com/55546882/97032254-cff6c880-1561-11eb-8513-96ddf2339304.png)  
+
+![grafik](https://user-images.githubusercontent.com/55546882/97032346-f74d9580-1561-11eb-9746-f276ec5e08cc.png)
 
 
 
