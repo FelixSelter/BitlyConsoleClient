@@ -26,9 +26,11 @@ import requests
 import qrcode
 import json
 import os
+from selenium.webdriver.firefox import webdriver
+import webbrowser
 
+driver = None
 config = os.path.dirname(__file__) + "/config.json"
-
 TOKEN = None
 
 if len(sys.argv) > 1:
@@ -69,6 +71,7 @@ def helpUser():
         print("-Short a link: bitly shorten https://dev.bitly.com/")
         print("-Get the original link: bitly retreive bit.ly/12a4b6c")
         print("-Generate Qr code even without bitly pro: bitly qr bit.ly/12a4b6c")
+    print("-Short a link without an account: bitly shorten-noaccount https://dev.bitly.com/")
 
 
 def shorten(url):
@@ -79,6 +82,10 @@ def shorten(url):
     data = '{ "long_url": "' + url + '", "domain": "bit.ly" }'
     response = requests.post('https://api-ssl.bitly.com/v4/shorten', headers=headers, data=data)
     return response.json()["link"], response
+
+
+def shortenNoAccount(url):
+    pass
 
 
 def retrieve(url):
@@ -158,3 +165,18 @@ if not TOKEN == None:
     except KeyError:
         print(response["message"])
         print(response["description"])
+
+try:
+    if str(action).lower() == "shorten-noaccount":
+        print("Make sure Firefox is installed")
+        if not os.path.exists("geckodriver.exe"):
+            print("No Geckodriver installed. Please download, extreact, and move to the application folder")
+            webbrowser.open("https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-win64.zip")
+            os.open(os.path.dirname(__file__))
+
+        if driver is None:
+            driver = webdriver.firefox
+
+except KeyError:
+    print(response["message"])
+    print(response["description"])
