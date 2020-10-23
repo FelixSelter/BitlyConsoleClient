@@ -1,0 +1,1 @@
+python bitly.py %1 %2
