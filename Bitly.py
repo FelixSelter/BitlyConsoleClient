@@ -186,6 +186,7 @@ try:
         driver.find_element_by_xpath('//*[@id="shorten_url"]').send_keys(url)
         driver.find_element_by_xpath('//*[@id="shorten_btn"]').click()
         print(driver.find_element_by_xpath('//*[@id="shortened_url"]').get_attribute('value'))
+        driver.close()
 
 except KeyError:
     print(response["message"])
