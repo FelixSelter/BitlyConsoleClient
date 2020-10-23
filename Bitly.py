@@ -26,8 +26,10 @@ import requests
 import qrcode
 import json
 import os
-from selenium.webdriver.firefox import webdriver
 import webbrowser
+
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 driver = None
 config = os.path.dirname(__file__) + "/config.json"
@@ -169,13 +171,21 @@ if not TOKEN == None:
 try:
     if str(action).lower() == "shorten-noaccount":
         print("Make sure Firefox is installed")
-        if not os.path.exists("geckodriver.exe"):
+        if not (os.path.exists(os.path.dirname(__file__) + "/geckodriver.exe") or os.path.exists(
+                os.path.dirname(__file__) + "/geckodriver")):
             print("No Geckodriver installed. Please download, extreact, and move to the application folder")
-            webbrowser.open("https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-win64.zip")
-            print("Application Folder "+os.path.dirname(__file__))
+            webbrowser.open("https://github.com/mozilla/geckodriver/releases")
+            print("Application Folder " + os.path.dirname(__file__))
+            exit()
 
         if driver is None:
-            driver = webdriver.firefox
+            options = Options()
+            # options.headless = True
+        driver = webdriver.Firefox(options=options)
+        driver.get("https://bitly.com/")
+        driver.find_element_by_xpath('//*[@id="shorten_url"]').send_keys(url)
+        driver.find_element_by_xpath('//*[@id="shorten_btn"]').click()
+        print(driver.find_element_by_xpath('//*[@id="shortened_url"]').get_attribute('value'))
 
 except KeyError:
     print(response["message"])
