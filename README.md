@@ -3,6 +3,7 @@ Clone the repository to create bitlinks from you shell. Its written in python so
 
 Installation:
 git clone https://github.com/FelixSelter/BitlyConsoleClient.git
+https://imgur.com/mEXo7t2
 If you're using Windows simply execute the install.bat file
 Else you should install the riquirements using pip "pip install -r requirements.txt"
 Consider adding the root folder to your os path variable to execute the file
