@@ -34,7 +34,7 @@ Clone the repository to create bitlinks from you shell. Its written in python so
 ### You could also launch using python. Notice the %cd% ![grafik](https://user-images.githubusercontent.com/55546882/97022386-573d3f80-1554-11eb-8515-db98cb9a6d1e.png)  
 
 
-#If you want to use the program without an account you should install firefox and download geckodriver
+### If you want to use the program without an account you should install firefox and download geckodriver
 
 ![grafik](https://user-images.githubusercontent.com/55546882/97032015-6971aa80-1561-11eb-8ed8-d59f1486e712.png)  
 
