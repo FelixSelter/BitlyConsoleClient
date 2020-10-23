@@ -1,7 +1,7 @@
 # BitlyConsoleClient
 Clone the repository to create bitlinks from you shell. Its written in python so every os should be supported. Account and no Account are supported
 
-#Installation:  
+# Installation:  
 git clone https://github.com/FelixSelter/BitlyConsoleClient.git
 ![grafik](https://user-images.githubusercontent.com/55546882/97016090-9bc4dd00-154c-11eb-8fa2-2047a60a9903.png)
 If you're using Windows simply execute the install.bat file
