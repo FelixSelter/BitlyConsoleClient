@@ -1,1 +1,2 @@
-python bitly.py %1 %2
+@echo off
+python %~dp0/bitly.py %1 %2

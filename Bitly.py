@@ -31,10 +31,11 @@ config = os.path.dirname(__file__) + "/config.json"
 
 TOKEN = None
 
-if (sys.argv[1].lower() == "deletetoken"):
-    os.remove(config)
-    print("Token deleted!")
-    print()
+if len(sys.argv) > 1:
+    if (sys.argv[1].lower() == "deletetoken"):
+        os.remove(config)
+        print("Token deleted!")
+        print()
 
 if os.path.exists(config):
     with open(config) as json_data_file:
